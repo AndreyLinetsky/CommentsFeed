@@ -22,7 +22,7 @@ export default class FilterPanel extends React.Component {
     };
   }
 
-  onFilterChange = event => {
+  onFilterChange = (event) => {
     this.setState({ filterValue: event.target.value });
   };
 

@@ -9,7 +9,7 @@ export const initialState = {
 
 function addComment(state, payload) {
   const { lastFilterValue } = state;
-  const { email, message } = payload;
+  const { email, message, createdAt } = payload;
   const shouldAddCommentToFilteredResults =
     !lastFilterValue ||
     email.toLowerCase().includes(lastFilterValue.toLowerCase());
@@ -17,7 +17,7 @@ function addComment(state, payload) {
   if (shouldAddCommentToFilteredResults) {
     return {
       ...state,
-      comments: [...state.comments, { email, message }],
+      comments: [...state.comments, { email, message, createdAt }],
       submitCommentErrorMessage: ''
     };
   }

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import React from 'react';
-import Gravatar from './Gravatar';
+import GravatarPanel from './GravatarPanel';
 import EmailAndMessagePanel from './EmailAndMessagePanel';
 
 const StyledListItem = styled.li`
@@ -15,7 +15,7 @@ export default function CommentItem({ comment }) {
   const { email } = comment;
   return (
     <StyledListItem>
-      <Gravatar {...{ email }} />
+      <GravatarPanel {...{ email }} />
       <EmailAndMessagePanel {...comment} />
     </StyledListItem>
   );
